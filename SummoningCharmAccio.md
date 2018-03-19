@@ -6,5 +6,5 @@ Since developers are the closest thing to wizards, they created Axios: A way to 
 
 Inline-style: 
 ![Accio](Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Accio Firebolt")
+![alt text](https://assets-auto.rbl.ms/380d4299f198bcd0677b2e2e58eb8c256a65fac65b49e535d0e8d0affd5d0259 "Accio Firebolt")
  "Developers are wizards")

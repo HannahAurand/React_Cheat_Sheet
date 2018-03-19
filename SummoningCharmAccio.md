@@ -37,14 +37,16 @@ export default class PersonList extends React.Component {
       </ul>
     )
   }
-}```
+}
+```
  
 Let's look at the code and break it down into parts: 
 
 ```export default class PersonList extends React.Component {
   state = {
     persons: []
-  }```
+  }
+  ```
 
 In the above snippet, we are creating a persons array in our state object. This means that we are going to change this array within this component. 
 
@@ -56,9 +58,11 @@ The next bit is a bit more complicated:
         const persons = res.data;
         this.setState({ persons });
       })
-  }```
+  }
+  ```
 
 Within the above code snippet, we are telling basically saying:
 
-```Axios, go get this json data API.
-Then once you've done that, your response with it should be to: get the data within it, and set it to the name "persons." Then, take "persons," and all that it entails, and set this component's state to that data.```
+Axios, go get this json data API.
+Then once you've done that, your response with it should be to: get the data within it, and set it to the name "persons." Then, take "persons," and all that it entails, and set this component's state to that data.
+

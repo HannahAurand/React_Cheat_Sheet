@@ -1,0 +1,35 @@
+#Passing Props down through React Router
+
+Router isn't just for rendering components at certain paths.
+Routes also help us with passing down data from a parent component to a child component.
+
+All of our data is supposed to be at the lowest point possible in the child tree in react, but at the highest point necessary for all the children of that component to receive its information.
+
+When we render a component at a specific route in the App file, it looks like this normally: 
+
+`
+<Route path='/dashboard' component={Dashboard} />
+`
+This means that at the URL path /dashboard, the {Dashboard} component will be rendered on the page.
+
+What if we wanted to pass down some information from the parent to that particular child? There are different ways to do it, but React gives us a preferred solution: RENDER.
+
+`
+<Route
+  path='/dashboard'
+  render={(props) => <Dashboard {...props} isAuthed={true} />}
+/>
+`
+Here is another example of render: 
+
+`
+<Route exact path='/' render={(props) => (
+  <PageContent {...props} pass_to_page_content='hi' />
+)}/>
+`
+Render allows us to "unzip" the proverbial data-purse from our parent to let it fall into the hands of the child component. 
+
+Notice that we are taking "props" as a parameter in the anonymous arrow function, and saying "render the PageContent component with the props from the parent (made available by the spread operator "...")
+We can also establish anything else we would like to send to the child element, exemplified by "pass_to_page_content='hi'." 
+
+This is necessary because the purpose of react is to establish a fast, scalable and simple front end. 
